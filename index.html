@@ -1,183 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guest Registration Card</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid black;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+
+        .company-name {
+            font-size: 1.5em;
+        }
+
+        .title {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.5em;
+        }
+
+        .card-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .card-details p {
+            margin: 0;
+        }
+
+        .card-details input {
+            width: 100px;
+            text-align: right;
+        }
+
+        .registration-form {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .registration-form th,
+        .registration-form td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .registration-form th {
+            background-color: #f2f2f2;
+        }
+
+        .registration-form input[type="text"],
+        .registration-form input[type="email"],
+        .registration-form input[type="date"],
+        .registration-form input[type="time"],
+        .registration-form input[type="number"] {
+            width: 95%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .footer {
+            margin-top: 20px;
+            border-top: 2px solid black;
+            padding-top: 10px;
+        }
+
+        .footer .p1 {
+            font-weight: 800;
+        }
+
+        .footer .p2 {
+            font-size: 10px;
+        }
+
+        .footer .p3 {
+            font-size: 13px;
+        }
+
+        .print-info .p1 {
+            font-weight: 800;
+        }
+
+        .signature {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            justify-content: space-between;
+        }
+
+        .signature-box,
+        .initial-box {
+            width: 100px;
+            height: 30px;
+            border: 1px solid black;
+            margin-left: 10px;
+        }
+
+        .company-details {
+            margin-top: 20px;
+        }
+
+        .print-info {
+            display: flex;
+            justify-content: space-between;
+            border-top: 2px solid black;
+            padding-top: 10px;
+            margin-top: 20px;
+        }
+
+        .print-info input {
+            width: auto;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
     <div class="container">
-      <div class="header">
-        <img src="logo.png" alt="Company Logo" class="logo" />
-        <h2 class="company-name">Yellow Bells Signature</h2>
-      </div>
-
-      <h2 class="title">Guest Registration Card</h2>
-      <div class="card-details">
-        <p>
-          GR Card No.: <input type="text" name="gr_card_no" placeholder="797" />
-        </p>
-        <p>Folio No.: <input type="text" name="folio_no" /></p>
-      </div>
-
-      <table class="registration-form">
-        <tr>
-          <th colspan="2">Personal</th>
-        </tr>
-        <tr>
-          <td>Name</td>
-          <td><input type="text" name="name" /></td>
-          <td>Email</td>
-          <td><input type="email" name="email" /></td>
-        </tr>
-        <tr>
-          <td>Phone</td>
-          <td><input type="text" name="phone" /></td>
-          <td>Fax</td>
-          <td><input type="text" name="fax" /></td>
-        </tr>
-        <tr>
-          <td>Mobile</td>
-          <td><input type="text" name="mobile" /></td>
-          <td>City</td>
-          <td><input type="text" name="city" /></td>
-        </tr>
-        <tr>
-          <td>Address</td>
-          <td><input type="text" name="address" /></td>
-          <td>Country</td>
-          <td><input type="text" name="country" /></td>
-        </tr>
-        <tr>
-          <td>Identity</td>
-          <td><input type="text" name="identity" /></td>
-        </tr>
-        <tr>
-          <th colspan="2">Company Details</th>
-          <th colspan="2">Business Source Details</th>
-        </tr>
-        <tr>
-          <td>Company</td>
-          <td><input type="text" name="company" /></td>
-          <td>Business Source</td>
-          <td><input type="text" name="business_source" /></td>
-        </tr>
-        <tr>
-          <th colspan="2">Accommodation</th>
-        </tr>
-        <tr>
-          <td>Arrival Date</td>
-          <td><input type="date" name="arrival_date" /></td>
-          <td>Arrival Time</td>
-          <td><input type="time" name="arrival_time" /></td>
-        </tr>
-        <tr>
-          <td>Dep. Date</td>
-          <td><input type="date" name="dep_date" /></td>
-          <td>Dep. Time</td>
-          <td><input type="time" name="dep_time" /></td>
-        </tr>
-        <tr>
-          <td>Night(s)</td>
-          <td><input type="number" name="nights" /></td>
-          <td>Pax</td>
-          <td><input type="text" name="pax" /></td>
-        </tr>
-        <tr>
-          <td>Room</td>
-          <td><input type="text" name="room" /></td>
-          <td>Rate Type</td>
-          <td><input type="text" name="rate_type" /></td>
-        </tr>
-        <tr>
-          <td>Tariff</td>
-          <td><input type="text" name="tariff" /></td>
-          <td>Total Charges</td>
-          <td><input type="text" name="total_charges" /></td>
-        </tr>
-        <tr>
-          <td>Tax</td>
-          <td><input type="text" name="tax" /></td>
-          <td>Amount Paid</td>
-          <td><input type="text" name="amount_paid" /></td>
-        </tr>
-        <tr>
-          <td>Discount</td>
-          <td><input type="text" name="discount" /></td>
-          <td>Due Amount</td>
-          <td><input type="text" name="due_amount" /></td>
-        </tr>
-        <tr>
-          <td>Adjustment</td>
-          <td><input type="text" name="adjustment" /></td>
-          <td>Package Name</td>
-          <td><input type="text" name="package_name" /></td>
-        </tr>
-        <tr>
-          <td>Net</td>
-          <td><input type="text" name="net" /></td>
-        </tr>
-        <tr>
-          <th colspan="2">Payment Details</th>
-        </tr>
-        <tr>
-          <td>Payment Type</td>
-          <td><input type="text" name="payment_type" /></td>
-          <td>Direct Billing A/C</td>
-          <td><input type="text" name="direct_billing_ac" /></td>
-        </tr>
-        <tr>
-          <th colspan="4">Remark</th>
-        </tr>
-        <tr>
-          <td colspan="4">
-            <input type="text" name="remark" style="width: 100%" />
-          </td>
-        </tr>
-      </table>
-
-      <div class="footer">
-        <p class="p1">Please Note</p>
-        <p class="p3">Reg. Cash NOTICE</p>
-        <p class="p3">Reg. Cash NOTICE</p>
-        <div class="signature">
-          <p>Guest Signature</p>
-          <div class="signature-box"></div>
-          <p class="p2">
-            Yellow Bells Signature regularly has special offers and
-            promotions.<br />
-            If you would prefer not to receive this information, please initial
-            in this box.
-          </p>
-          <div class="initial-box"></div>
+        <div class="header">
+            <img src="logo.png" alt="Company Logo" class="logo" />
+            <h2 class="company-name">Yellow Bells Signature</h2>
         </div>
 
-        
-        <div class="company-details">
-          <p>Hotel Phone: 8977046432</p>
-          <p>Hotel Email: yb3@cannychoicehotels.com</p>
-          <p>
-            Address: 1-111/1/b/273/nr, Above Trim X Mens Salon, Raghavendra
-            Colony, Kondapur, Hyderabad, Telangana, 500084, India
-          </p>
+        <h2 class="title">Guest Registration Card</h2>
+        <div class="card-details">
+            <p>
+                GR Card No.: <input type="text" name="gr_card_no" placeholder="797" />
+            </p>
+            <p>Folio No.: <input type="text" name="folio_no" /></p>
         </div>
-      </div>
 
-      <div class="print-info">
-        <p class="p1">
-          Printed On:
-          <input
-            type="text"
-            name="printed_on"
-            placeholder="09/07/2024 02:29:08 AM"
-          />
-        </p>
-        <p class="p1">
-          Checked In By:
-          <input type="text" name="checked_in_by" placeholder="Afridi" />
-        </p>
-      </div>
+        <table class="registration-form">
+            <tr>
+                <th colspan="2">Personal</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" /></td>
+                <td>Email</td>
+                <td><input type="email" name="email" /></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><input type="text" name="phone" /></td>
+                <td>Fax</td>
+                <td><input type="text" name="fax" /></td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td><input type="text" name="mobile" /></td>
+                <td>City</td>
+                <td><input type="text" name="city" /></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" name="address" /></td>
+                <td>Country</td>
+                <td><input type="text" name="country" /></td>
+            </tr>
+            <tr>
+                <td>Identity</td>
+                <td><input type="text" name="identity" /></td>
+            </tr>
+            <tr>
+                <th colspan="2">Company Details</th>
+                <th colspan="2">Business Source Details</th>
+            </tr>
+            <tr>
+                <td>Company</td>
+                <td><input type="text" name="company" /></td>
+                <td>Business Source</td>
+                <td><input type="text" name="business_source" /></td>
+            </tr>
+            <tr>
+                <th colspan="2">Accommodation</th>
+            </tr>
+            <tr>
+                <td>Arrival Date</td>
+                <td><input type="date" name="arrival_date" /></td>
+                <td>Arrival Time</td>
+                <td><input type="time" name="arrival_time" /></td>
+            </tr>
+            <tr>
+                <td>Dep. Date</td>
+                <td><input type="date" name="dep_date" /></td>
+                <td>Dep. Time</td>
+                <td><input type="time" name="dep_time" /></td>
+            </tr>
+            <tr>
+                <td>Night(s)</td>
+                <td><input type="number" name="nights" /></td>
+                <td>Pax</td>
+                <td><input type="text" name="pax" /></td>
+            </tr>
+            <tr>
+                <td>Room</td>
+                <td><input type="text" name="room" /></td>
+                <td>Rate Type</td>
+                <td><input type="text" name="rate_type" /></td>
+            </tr>
+            <tr>
+                <td>Tariff</td>
+                <td><input type="text" name="tariff" /></td>
+                <td>Total Charges</td>
+                <td><input type="text" name="total_charges" /></td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td><input type="text" name="tax" /></td>
+                <td>Amount Paid</td>
+                <td><input type="text" name="amount_paid" /></td>
+            </tr>
+            <tr>
+                <td>Discount</td>
+                <td><input type="text" name="discount" /></td>
+                <td>Due Amount</td>
+                <td><input type="text" name="due_amount" /></td>
+            </tr>
+            <tr>
+                <td>Adjustment</td>
+                <td><input type="text" name="adjustment" /></td>
+                <td>Package Name</td>
+                <td><input type="text" name="package_name" /></td>
+            </tr>
+            <tr>
+                <td>Net</td>
+                <td><input type="text" name="net" /></td>
+            </tr>
+            <tr>
+                <th colspan="2">Payment Details</th>
+            </tr>
+            <tr>
+                <td>Payment Type</td>
+                <td><input type="text" name="payment_type" /></td>
+                <td>Direct Billing A/C</td>
+                <td><input type="text" name="direct_billing_ac" /></td>
+            </tr>
+            <tr>
+                <th colspan="4">Remark</th>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="text" name="remark" style="width: 100%" />
+                </td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            <p class="p1">Please Note</p>
+            <p class="p3">Reg. Cash NOTICE</p>
+            <p class="p3">Reg. Cash NOTICE</p>
+            <div class="signature">
+                <p>Guest Signature</p>
+                <div class="signature-box"></div>
+                <p class="p2">
+                    Yellow Bells Signature regularly has special offers and
+                    promotions.<br />
+                    If you would prefer not to receive this information, please initial
+                    in this box.
+                </p>
+                <div class="initial-box"></div>
+            </div>
+
+            <div class="company-details">
+                <p>Hotel Phone: 8977046432</p>
+                <p>Hotel Email: yb3@cannychoicehotels.com</p>
+                <p>
+                    Address: 1-111/1/b/273/nr, Above Trim X Mens Salon, Raghavendra
+                    Colony, Kondapur, Hyderabad, Telangana, 500084, India
+                </p>
+            </div>
+        </div>
+
+        <div class="print-info">
+            <p class="p1">
+                Printed On:
+                <input
+                    type="text"
+                    name="printed_on"
+                    placeholder="09/07/2024 02:29:08 AM"
+                />
+            </p>
+            <p class="p1">
+                Checked In By:
+                <input type="text" name="checked_in_by" placeholder="Afridi" />
+            </p>
+        </div>
     </div>
-  </body>
+</body>
 </html>
