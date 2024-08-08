@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.company-name {
+    font-size: 1.5em;
+}
+
+.title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.5em;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card-details p {
+    margin: 0;
+}
+
+.card-details input {
+    width: 100px;
+    text-align: right;
+}
+
+.registration-form {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.registration-form th,
+.registration-form td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.registration-form th {
+    background-color: #f2f2f2;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="date"],
+.registration-form input[type="time"],
+.registration-form input[type="number"] {
+    width: 95%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.footer {
+    margin-top: 20px;
+    border-top: 2px solid black;
+    padding-top: 10px;
+}
+.footer .p1{
+font-weight: 800;
+}
+
+
+.footer .p2{
+font-size: 10px;
+}
+
+.footer .p3{
+    font-size: 13px;
+}
+.print-info .p1{
+    font-weight: 800;
+}
+.signature {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.signature-box,
+.initial-box {
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    margin-left: 10px;
+}
+
+.company-details {
+    margin-top: 20px;
+}
+
+.print-info {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid black;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+.print-info input {
+    width: auto;
+    text-align: right;
+}
